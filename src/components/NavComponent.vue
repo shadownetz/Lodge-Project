@@ -34,6 +34,7 @@ export default{
 .slide-fade-enter-active{transition:all .3s ease}
 .slide-fade-leave-active{transition:all .5s cubic-bezier(1.0,0.5,0.8,1.0)}
 .slide-fade-enter, .slide-fade-leave-to{transform:translateX(-20px);opacity:0}
+.sticky{position:fixed;top:0;width:100%}
 @media screen and (max-width: 768px){
 .nav-head{
     height:100px;

@@ -9,7 +9,7 @@
         </div>
         <div class="owl-stage-outer">
             <div class="owl-stage">
-                <div v-for="item in items" class="owl-item" style="height:100%width:120px;margin-right:3px">
+                <div v-for="item in items" class="owl-item" style="height:100%width:120px;margin-right:3px" :key="item.id">
                     <div :class="item.class"> image {{item.class}}</div>
                 </div>
             </div>
@@ -20,9 +20,47 @@
         <p>click the button below to select <br/>any lodge of your choice...</p>
         <i class="fa fa-long-arrow-right"></i><a href="#">Click Me</a><i class="fa fa-long-arrow-left"></i>
     </div>
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div style="border-bottom:2px solid #D4A52A;width:40%;padding:10px;color:#000;font-size:1.2em">Trending Lodges</div>
-        
+    <div class="col-md-12 col-sm-12 col-xs-12 house-layer1">
+       <h4> Trending Lodges</h4>
+       <div class="layer-line"></div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="../assets/images/slides/2x/house001.jpg" alt="lodge">
+        <div class="carousel-caption  d-md-block">
+            <h5>House One</h5>
+            <p>Best Lodge Estate Ever</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/images/slides/2x/house002.jpg" alt="lodge">
+        <div class="carousel-caption d-md-block">
+            <h5>House Two</h5>
+            <p>Best Lodge Estate Ever</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/images/slides/2x/house003.jpg" alt="lodge">
+        <div class="carousel-caption d-md-block">
+            <h5>House Three</h5>
+            <p>Best Lodge Estate Ever</p>
+        </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
     </div>
 </div>
 </div>
@@ -34,7 +72,7 @@ name:'bodyComponent',
 data () {
     return {
         items:[
-            {class:'item first'},{class:'item second'},{class:'item third'},
+            {class:'item first',id:1},{class:'item second',id:2},{class:'item third',id:3},
         ],isactive:false
     }
 },
@@ -80,9 +118,17 @@ data () {
 .house-body i:not(:last-child){left:28%;animation: activate-right 1s linear infinite}
 .house-body i:last-child{left:68%;animation: activate-left 1s linear infinite}
 .house-body a{border:1px solid rgb(13, 76, 134);padding:10px;margin-left:40%;}
+.house-layer1{text-align: center;padding:8px}
+.house-layer1 .layer-line{
+    width:30%;height:0;border:2px solid #D4A52A;
+    margin-left:35%;margin-bottom:10px
+    }
 }
 .hide{display:none}
 .owl-carousel .item{
+    background:brown;height:200px;width:100%
+}
+.lodge .item{
     background:brown;height:200px;width:100%
 }
 </style>
