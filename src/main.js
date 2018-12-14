@@ -40,17 +40,17 @@ $(function () {
         owl.owlCarousel({
         items:4,
         loop:true,
-        margin:3,
+        margin:0,
         autoplay:true,
         autoplayTimeout:1000,
         autoplayHoverPause: true,
         
         });
-  var header = $('.nav-head');
-  window.onscroll = stickyHeader();
-  function stickyHeader() {
-    if (window.pageYOffset > header.offsetTop) {
-      header.toggleClass('.sticky')
-    }
-  }
+  // var header = $('.nav-head');
+  // window.onscroll = stickyHeader();
+  // function stickyHeader() {
+  //   if (window.pageYOffset > header.offsetTop) {
+  //     header.toggleClass('.sticky')
+  //   }
+  // }
 })

@@ -27,6 +27,17 @@
           background: url("./assets/grand-spin-1x.gif") center no-repeat #fff;
         } */
 #app {
-
+background: #000000
+}
+body{overflow-x:hidden}
+#app{
+    background: #000000 url("assets/images/backgrounds/1x/benches.png") fixed center no-repeat;
+    background-size:cover;
+  }
+@media screen and (max-width:768px){
+  #app{
+    background: #000000 url("assets/images/backgrounds/1x/benches.png") fixed center no-repeat repeat;
+    background-size:100%
+  }
 }
 </style>
