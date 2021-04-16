@@ -1,6 +1,7 @@
 # house-agent
 
 > Lodge_Project
+> Built while learning the Vue Js Framework
 
 ## Build Setup
 
